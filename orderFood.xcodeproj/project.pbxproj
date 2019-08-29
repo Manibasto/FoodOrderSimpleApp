@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3764CA9A852BBDB1B9638B6A /* Pods_orderFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 569EA737D780632F9F4A0B97 /* Pods_orderFood.framework */; };
+		9E5A77B2231791F2008320CC /* Chocolate Cake.DAE in Resources */ = {isa = PBXBuildFile; fileRef = 9E5A77B1231791F2008320CC /* Chocolate Cake.DAE */; };
+		9E5A77B42317920C008320CC /* ChocolateCake.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9E5A77B32317920C008320CC /* ChocolateCake.scn */; };
 		9E78ECF82314F5FE005C74EC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78ECF72314F5FE005C74EC /* Extension.swift */; };
 		9E78ED042314F62B005C74EC /* UIPageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78ECFB2314F62A005C74EC /* UIPageController.swift */; };
 		9E78ED052314F62B005C74EC /* UISearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E78ECFC2314F62A005C74EC /* UISearch.swift */; };
@@ -42,11 +44,19 @@
 		9EB8D62D2314EA2600F75076 /* orderFood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9EB8D62B2314EA2600F75076 /* orderFood.xcdatamodeld */; };
 		9EB8D62F2314EA4100F75076 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EB8D62E2314EA4100F75076 /* Assets.xcassets */; };
 		9EB8D6322314EA4100F75076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EB8D6302314EA4100F75076 /* LaunchScreen.storyboard */; };
+		9EBFE86F2316B5B600B89233 /* ArKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBFE86E2316B5B600B89233 /* ArKitViewController.swift */; };
+		9EBFE8722316B5E300B89233 /* Drone.dae in Resources */ = {isa = PBXBuildFile; fileRef = 9EBFE8702316B5E300B89233 /* Drone.dae */; };
+		9EBFE8732316B5E300B89233 /* Drone.scn in Resources */ = {isa = PBXBuildFile; fileRef = 9EBFE8712316B5E300B89233 /* Drone.scn */; };
+		F4F71CF72315970100A5C406 /* firstCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F71CF62315970100A5C406 /* firstCell.swift */; };
+		F4F71CF92315985900A5C406 /* secondCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F71CF82315985900A5C406 /* secondCell.swift */; };
+		F4F71CFB231599F900A5C406 /* foodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4F71CFA231599F900A5C406 /* foodViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		569EA737D780632F9F4A0B97 /* Pods_orderFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_orderFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E4016155CCDB7EC2FF45E65 /* Pods-orderFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-orderFood.release.xcconfig"; path = "Target Support Files/Pods-orderFood/Pods-orderFood.release.xcconfig"; sourceTree = "<group>"; };
+		9E5A77B1231791F2008320CC /* Chocolate Cake.DAE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = "Chocolate Cake.DAE"; sourceTree = "<group>"; };
+		9E5A77B32317920C008320CC /* ChocolateCake.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = ChocolateCake.scn; sourceTree = "<group>"; };
 		9E78ECF72314F5FE005C74EC /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		9E78ECFB2314F62A005C74EC /* UIPageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIPageController.swift; sourceTree = "<group>"; };
 		9E78ECFC2314F62A005C74EC /* UISearch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UISearch.swift; sourceTree = "<group>"; };
@@ -83,7 +93,13 @@
 		9EB8D62E2314EA4100F75076 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EB8D6312314EA4100F75076 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9EB8D6332314EA4100F75076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EBFE86E2316B5B600B89233 /* ArKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArKitViewController.swift; sourceTree = "<group>"; };
+		9EBFE8702316B5E300B89233 /* Drone.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Drone.dae; sourceTree = "<group>"; };
+		9EBFE8712316B5E300B89233 /* Drone.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Drone.scn; sourceTree = "<group>"; };
 		B2F1C1CB6E34F5CF5D071139 /* Pods-orderFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-orderFood.debug.xcconfig"; path = "Target Support Files/Pods-orderFood/Pods-orderFood.debug.xcconfig"; sourceTree = "<group>"; };
+		F4F71CF62315970100A5C406 /* firstCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstCell.swift; sourceTree = "<group>"; };
+		F4F71CF82315985900A5C406 /* secondCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondCell.swift; sourceTree = "<group>"; };
+		F4F71CFA231599F900A5C406 /* foodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foodViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +167,10 @@
 				9E78ED0D23150DC0005C74EC /* SignUpViewController.swift */,
 				9E78ED1023152FE7005C74EC /* ListViewController.swift */,
 				9E78ED372315761E005C74EC /* CartAccountViewController.swift */,
+				9EBFE86E2316B5B600B89233 /* ArKitViewController.swift */,
+				F4F71CFA231599F900A5C406 /* foodViewController.swift */,
+				F4F71CF62315970100A5C406 /* firstCell.swift */,
+				F4F71CF82315985900A5C406 /* secondCell.swift */,
 				9E78ED1823154893005C74EC /* NotificationTableViewCell.swift */,
 			);
 			path = Controller;
@@ -159,6 +179,10 @@
 		9E78ED2023155410005C74EC /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9E5A77B1231791F2008320CC /* Chocolate Cake.DAE */,
+				9E5A77B32317920C008320CC /* ChocolateCake.scn */,
+				9EBFE8702316B5E300B89233 /* Drone.dae */,
+				9EBFE8712316B5E300B89233 /* Drone.scn */,
 				9E78ED2123155410005C74EC /* UIImage+AspectFit.swift */,
 				9E78ED2223155410005C74EC /* UIImageView+Tools.swift */,
 				9E78ED2323155410005C74EC /* ImageSlideshowItem.swift */,
@@ -269,6 +293,10 @@
 			files = (
 				9EB8D6322314EA4100F75076 /* LaunchScreen.storyboard in Resources */,
 				9EB8D62F2314EA4100F75076 /* Assets.xcassets in Resources */,
+				9E5A77B2231791F2008320CC /* Chocolate Cake.DAE in Resources */,
+				9EBFE8722316B5E300B89233 /* Drone.dae in Resources */,
+				9E5A77B42317920C008320CC /* ChocolateCake.scn in Resources */,
+				9EBFE8732316B5E300B89233 /* Drone.scn in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +354,7 @@
 				9E78ED052314F62B005C74EC /* UISearch.swift in Sources */,
 				9E78ED2D23155410005C74EC /* UIImageView+Tools.swift in Sources */,
 				9E78ED2F23155410005C74EC /* ActivityIndicator.swift in Sources */,
+				F4F71CF72315970100A5C406 /* firstCell.swift in Sources */,
 				9E78ED3423155410005C74EC /* InputSource.swift in Sources */,
 				9EB8D62D2314EA2600F75076 /* orderFood.xcdatamodeld in Sources */,
 				9E78ED0C2314F62B005C74EC /* UIImageView.swift in Sources */,
@@ -333,6 +362,7 @@
 				9E78ED132315302B005C74EC /* LocationManager.swift in Sources */,
 				9E78ED0A2314F62B005C74EC /* UILabel.swift in Sources */,
 				9E78ED3123155410005C74EC /* PageIndicatorPosition.swift in Sources */,
+				F4F71CF92315985900A5C406 /* secondCell.swift in Sources */,
 				9E78ED1923154893005C74EC /* NotificationTableViewCell.swift in Sources */,
 				9E78ED15231530AD005C74EC /* Reachability.swift in Sources */,
 				9E78ED062314F62B005C74EC /* UIView.swift in Sources */,
@@ -343,7 +373,9 @@
 				9E78ED092314F62B005C74EC /* UIButton.swift in Sources */,
 				9E78ED3623155410005C74EC /* ZoomAnimatedTransitioning.swift in Sources */,
 				9E78ED1F23154A27005C74EC /* CustomLabel.swift in Sources */,
+				F4F71CFB231599F900A5C406 /* foodViewController.swift in Sources */,
 				9E78ED1123152FE7005C74EC /* ListViewController.swift in Sources */,
+				9EBFE86F2316B5B600B89233 /* ArKitViewController.swift in Sources */,
 				9E78ED0E23150DC0005C74EC /* SignUpViewController.swift in Sources */,
 				9E78ED3323155410005C74EC /* SwiftSupport.swift in Sources */,
 				9E78ED0B2314F62B005C74EC /* UIStackView.swift in Sources */,
@@ -494,6 +526,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H2C4R2VE3A;
 				INFOPLIST_FILE = orderFood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -513,6 +546,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H2C4R2VE3A;
 				INFOPLIST_FILE = orderFood/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

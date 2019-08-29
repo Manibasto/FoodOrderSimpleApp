@@ -94,16 +94,16 @@ class SignUpViewController: UIViewController {
       ConfirmPassword.widthAnchor.constraint(equalToConstant: 63.0).isActive = true
       ConfirmPassword.heightAnchor.constraint(equalToConstant: 63.0).isActive = true
       
-      userName.attributedPlaceholder = NSAttributedString(string: "Enter Username",
+      userName.attributedPlaceholder = NSAttributedString(string: "Username",
                                                           attributes: [NSAttributedString.Key.foregroundColor: UIColor.yellow])
       
-      emailID.attributedPlaceholder = NSAttributedString(string: "Enter Email id",
+      emailID.attributedPlaceholder = NSAttributedString(string: "Email id",
                                                          attributes: [NSAttributedString.Key.foregroundColor: UIColor.yellow])
       
-      password.attributedPlaceholder = NSAttributedString(string: "Enter Password",
+      password.attributedPlaceholder = NSAttributedString(string: "Password",
                                                           attributes: [NSAttributedString.Key.foregroundColor: UIColor.yellow])
       
-      ConfirmPassword.attributedPlaceholder = NSAttributedString(string: "Enter Confirm Password",
+      ConfirmPassword.attributedPlaceholder = NSAttributedString(string: "Confirm Password",
                                                           attributes: [NSAttributedString.Key.foregroundColor: UIColor.yellow])
       
       userName.setLeftPaddingPoints(20)
@@ -199,6 +199,7 @@ class SignUpViewController: UIViewController {
         delay(2) {
           self.letsGoButton.loadingIndicator(show: false)
           self.letsGoButton.setTitle("SignUp", for: .normal)
+            modelController.sharedInstance.modelUserName = user
           self.showConfirmAlert(title: "Success", message: "Registered Successfuly", buttonTitle: "Ok", buttonStyle: .default) { (action) in
             let controller = ListViewController()
             self.navigationController?.pushViewController(controller, animated: true)

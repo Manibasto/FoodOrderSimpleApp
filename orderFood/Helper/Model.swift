@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 class modelController: NSObject {
   
@@ -25,7 +26,12 @@ class modelController: NSObject {
   
   var CurrentLocation = String()
   var name = String()
+    
+    var passValue = [Notifications]()
+    var lattitude = CLLocationDegrees()
+    var langitude = CLLocationDegrees()
   
+    var modelUserName = String()
   
 }
 

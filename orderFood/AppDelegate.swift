@@ -34,6 +34,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
               }
               if let country = placemark?.country {
+                
+                if let latitude = location?.coordinate.latitude, let longtitude = location?.coordinate.longitude {
+                    modelController.sharedInstance.lattitude =  latitude
+                    modelController.sharedInstance.lattitude = longtitude
+                }
                 modelController.sharedInstance.CurrentLocation = country
               }
             }

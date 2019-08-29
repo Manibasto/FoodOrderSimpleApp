@@ -11,6 +11,7 @@ import FacebookLogin
 import FacebookCore
 import FBSDKCoreKit
 import FBSDKLoginKit
+import CoreLocation
 
 class LoginViewController: UIViewController {
   var loginManager               = LoginManager()
@@ -89,8 +90,8 @@ class LoginViewController: UIViewController {
     userName.delegate = self
     password.delegate = self
     
-    userName.text = "Basto@gmail.com"
-    password.text = "1234456"
+//    userName.text = "Basto@gmail.com"
+//    password.text = "1234456"
     
     userName.widthAnchor.constraint(equalToConstant: 63.0).isActive = true
     userName.heightAnchor.constraint(equalToConstant: 63.0).isActive = true
@@ -99,9 +100,9 @@ class LoginViewController: UIViewController {
     password.heightAnchor.constraint(equalToConstant: 63.0).isActive = true
     
     
-    userName.attributedPlaceholder = NSAttributedString(string: "Enter Username",
+    userName.attributedPlaceholder = NSAttributedString(string: "Username",
                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.yellow])
-    password.attributedPlaceholder = NSAttributedString(string: "Enter Password",
+    password.attributedPlaceholder = NSAttributedString(string: "Password",
                                                         attributes: [NSAttributedString.Key.foregroundColor: UIColor.yellow])
     
     userName.setLeftPaddingPoints(20)
@@ -178,11 +179,11 @@ class LoginViewController: UIViewController {
             guard let Info = result as? [String: Any] else { return }
             
             guard let name = Info["name"] as? String else{ return }
-            
+            modelController.sharedInstance.modelUserName = name
             if let imageURL = ((Info["picture"] as? [String: Any])?["data"] as? [String: Any])?["url"] as? String {
               DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
-                let controller = SignUpViewController()
+                let controller = ListViewController()
                 self.navigationController?.pushViewController(controller, animated: true)
               }
             }
@@ -215,12 +216,33 @@ class LoginViewController: UIViewController {
       }else{
         letsGoButton.loadingIndicator(show: true)
         letsGoButton.setTitle("", for: .normal)
-        delay(2) {
-          self.letsGoButton.loadingIndicator(show: false)
-          self.letsGoButton.setTitle("Login", for: .normal)
-          self.showConfirmAlert(title: "Success", message: "Logged in Successfuly", buttonTitle: "Ok", buttonStyle: .default) { (action) in
-            let controller = ListViewController()
-            self.navigationController?.pushViewController(controller, animated: true)
+        
+        if Reachability.isConnectedToNetwork() {
+          LocationManager.sharedInstance.getCurrentReverseGeoCodedLocation { [weak self] (location:CLLocation?, placemark:CLPlacemark?, error:NSError?) in
+            if error != nil {
+              self?.showConfirmAlert(title: "", message: (error?.localizedDescription)!, buttonTitle: "Ok", buttonStyle: .default) { [weak self](action) in
+              }
+            }
+            if let country = placemark?.country {
+              
+              if let latitude = location?.coordinate.latitude, let longtitude = location?.coordinate.longitude {
+                modelController.sharedInstance.lattitude =  latitude
+                modelController.sharedInstance.lattitude = longtitude
+              }
+              modelController.sharedInstance.CurrentLocation = country
+              self?.delay(2) {
+                self?.letsGoButton.loadingIndicator(show: false)
+                self?.letsGoButton.setTitle("Login", for: .normal)
+                modelController.sharedInstance.modelUserName = email
+                self?.showConfirmAlert(title: "Success", message: "Logged in Successfuly", buttonTitle: "Ok", buttonStyle: .default) { (action) in
+                  let controller = ListViewController()
+                  self?.navigationController?.pushViewController(controller, animated: true)
+                }
+              }
+            }
+          }
+        }else{
+          self.showConfirmAlert(title: "", message: "Sorry, we can't connect right now. Please check your internet connection and try again.", buttonTitle: "Ok", buttonStyle: .default) { [weak self] (action) in
           }
         }
       }

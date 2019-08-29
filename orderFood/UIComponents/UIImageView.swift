@@ -15,6 +15,7 @@ final class UIImageFactory {
   init(){
     imageView = UIImageView()
     imageView.translatesAutoresizingMaskIntoConstraints = false
+    imageView.isUserInteractionEnabled = true
   }
   
   func CornerRadious(radious: CGFloat)->Self{

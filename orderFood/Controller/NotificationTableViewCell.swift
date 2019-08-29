@@ -170,12 +170,14 @@ struct Notifications: Codable {
   let title:String?
   let Message:String?
   let image:String?
+  var amount: String?
   
-  init(id:String,title:String,message:String,image:String) {
+  init(id:String,title:String,message:String,image:String, amount: String) {
     self.id = id
     self.title = title
     self.Message = message
     self.image = image
+    self.amount = amount
   }
 }
 
@@ -195,5 +197,6 @@ class NotificationAPI {
   }
   
   var NotificationInstance : [Notifications] = []
-  
+    var cartItems : [items] = [] 
+
 }
